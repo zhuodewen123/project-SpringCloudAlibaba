@@ -1,0 +1,7 @@
+[2022-10-31 16:48:45.657] [INFO ] [] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2022-10-31 16:48:47.740] [INFO ] [] [restartedMain] [c.a.n.client.config.impl.LocalConfigInfoProcessor] : LOCAL_SNAPSHOT_PATH:C:\Users\86134\nacos\config
+[2022-10-31 16:48:47.809] [INFO ] [] [restartedMain] [com.alibaba.nacos.client.config.impl.Limiter] : limitTime:5.0
+[2022-10-31 16:48:47.854] [WARN ] [] [restartedMain] [c.a.cloud.nacos.client.NacosPropertySourceBuilder] : Ignore the empty nacos configuration and get it based on dataId[warehouse] & group[DEFAULT_GROUP]
+[2022-10-31 16:48:47.860] [WARN ] [] [restartedMain] [c.a.cloud.nacos.client.NacosPropertySourceBuilder] : Ignore the empty nacos configuration and get it based on dataId[warehouse.yaml] & group[DEFAULT_GROUP]
+[2022-10-31 16:48:47.868] [INFO ] [] [restartedMain] [com.alibaba.nacos.client.config.utils.JvmUtil] : isMultiInstance:false
+[2022-10-31 16:48:47.890] [INFO ] [] [restartedMain] [o.s.c.b.c.PropertySourceBootstrapConfiguration] : Located property source: [BootstrapPropertySource {name='bootstrapProperties-warehouse-dev.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-warehouse.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-warehouse,DEFAULT_GROUP'}]
