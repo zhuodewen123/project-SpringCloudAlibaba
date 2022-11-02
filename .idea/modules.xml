@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inBound/inBound.iml" filepath="$PROJECT_DIR$/inBound/inBound.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/my_wms.iml" filepath="$PROJECT_DIR$/.idea/my_wms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outBound/outBound.iml" filepath="$PROJECT_DIR$/outBound/outBound.iml" />
+      <module fileurl="file://$PROJECT_DIR$/warehouse/warehouse.iml" filepath="$PROJECT_DIR$/warehouse/warehouse.iml" />
+    </modules>
+  </component>
+</project>
