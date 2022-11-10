@@ -49,12 +49,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- springboot-redis -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-
         <!-- aop切面 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -85,18 +79,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <version>2.2.3.RELEASE</version>
-        </dependency>
-
-        <!--mybatis-plus(注意和mybatis依赖不能一起引入,相互排斥)-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.4.3.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.5.1</version>
         </dependency>
 
         <!-- Nacos配置中心 -->
