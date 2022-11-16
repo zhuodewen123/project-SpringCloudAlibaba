@@ -23,13 +23,13 @@ import java.util.Date;
 public class MyBatisPlusConfig {
 
     /**
-     * 最新版
+     * 最新版分页
      */
     @ConditionalOnMissingBean
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
-        interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
+        interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.ORACLE));
         return interceptor;
     }
 
@@ -50,17 +50,18 @@ public class MyBatisPlusConfig {
             // 插入时的填充
             @Override
             public void insertFill(MetaObject metaObject) {
+                Date date=new Date();
                 //创建时间
-                this.setFieldValByName("creationDate", new Date(), metaObject);
-                //修改时间
-                this.setFieldValByName("lastUpdateDate", new Date(), metaObject);
+                this.setFieldValByName("createTime", date, metaObject);
+                //更新时间
+                this.setFieldValByName("updateTime", date, metaObject);
             }
 
             // 更新时的填充
             @Override
             public void updateFill(MetaObject metaObject) {
-                //修改时间
-                this.setFieldValByName("lastUpdateDate", new Date(), metaObject);
+                //更新时间
+                this.setFieldValByName("updateTime", new Date(), metaObject);
             }
         };
     }

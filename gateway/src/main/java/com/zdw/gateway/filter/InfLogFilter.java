@@ -17,7 +17,7 @@ import java.net.URI;
 import static org.springframework.http.server.PathContainer.parsePath;
 
 /**
- * 接口日志过滤器
+ * 接口日志过滤器(打印所有接口路径和入参)
  * @author 卓德文
  * @since 2022/11/11
  */
