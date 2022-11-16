@@ -146,10 +146,16 @@
         </dependency>
 
         <!--oracle-->
-        <dependency>
+        <!--<dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc7</artifactId>
             <version>12.1.0.2</version>
+        </dependency>-->
+
+        <!-- mysql数据库驱动 -->
+        <dependency>
+            <artifactId>mysql-connector-java</artifactId>
+            <groupId>mysql</groupId>
         </dependency>
 
         <!--swagger2注释生成文档的api和ui界面的api-->
