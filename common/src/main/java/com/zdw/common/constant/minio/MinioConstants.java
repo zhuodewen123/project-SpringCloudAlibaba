@@ -17,7 +17,7 @@ public class MinioConstants {
     public static final String CONTENT_TYPE_JPG = "jpg";
 
     //默认水印
-    public static final String DEFAULT_WATER_MARK = "仅限TCL王牌使用";
+    public static final String DEFAULT_WATER_MARK = "zhuodewen";
 
     //默认水印字体
     public static final String DEFAULT_FONT_NAME = "微软雅黑";

@@ -1,5 +1,6 @@
 package com.zdw.common.config.redis;
 
+import cn.hutool.core.util.StrUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
@@ -62,9 +63,8 @@ public class RedisConfig extends CachingConfigurerSupport {
         configuration = configuration.serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(new GenericJackson2JsonRedisSerializer()))
                 //不缓存null值
                 .disableCachingNullValues()
-                //缓存加上前缀，避免不同项目部署在同一个redis导致缓存互相覆盖,
-                //改为用一个冒号(spring默认的生成key策略用的两个冒号)
-                //.computePrefixWith(cacheName -> StrUtil.isEmpty(this.redisPrefix) ? cacheName + ":" : this.redisPrefix +":"+cacheName+":")
+                //缓存加上前缀，避免不同项目部署在同一个redis导致缓存互相覆盖,改为用一个冒号(spring默认的生成key策略用的两个冒号)
+                .computePrefixWith(cacheName -> StrUtil.isEmpty(this.redisPrefix) ? cacheName + ":" : this.redisPrefix +":"+cacheName+":")
                 // 设置过期时间，这里设置的不会影响其他地方用redisTemplate
                 .entryTtl(Duration.ofHours(6));
         return configuration;

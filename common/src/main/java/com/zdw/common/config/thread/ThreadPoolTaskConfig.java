@@ -51,8 +51,8 @@ public class ThreadPoolTaskConfig {
      * 自定义线程池(Bean的名称默认为首字母小写的方法名)
      * @return
      */
-    @Bean("asyncTaskExecutor")
-    public ThreadPoolTaskExecutor asyncTaskExecutor(){
+    @Bean("commonTaskExecutor")
+    public ThreadPoolTaskExecutor commonTaskExecutor(){
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         executor.setCorePoolSize(corePoolSize);
         executor.setMaxPoolSize(maxPoolSize);
