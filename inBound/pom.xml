@@ -123,18 +123,18 @@
             <version>1.0.26</version>
         </dependency>
 
-        <!--oracle-->
-        <!--<dependency>
+        <!--oracle驱动-->
+        <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc7</artifactId>
             <version>12.1.0.2</version>
-        </dependency>-->
+        </dependency>
 
         <!-- mysql数据库驱动 -->
-        <dependency>
+        <!--<dependency>
             <artifactId>mysql-connector-java</artifactId>
             <groupId>mysql</groupId>
-        </dependency>
+        </dependency>-->
 
         <!--swagger2注释生成文档的api和ui界面的api-->
         <dependency>
