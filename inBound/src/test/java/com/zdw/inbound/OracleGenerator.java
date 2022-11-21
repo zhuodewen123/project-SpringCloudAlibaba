@@ -16,7 +16,7 @@ public class OracleGenerator {
 	@Test
 	public void generator() {
 		//表名 (支持输入多个表，用","隔开，例如"A,B")
-		String tableName = "MAT_QC";
+		String tableName = "MAT_IN_DELIVERY_DETAIL";
 
 		//作者名
 		String author = "卓德文";
