@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Mybatis-Plus自动生成文件(Oracle)
  */
-public class OracleGenerator {
+public class MysqlGenerator {
 
 	@Test
 	public void generator() {
@@ -24,7 +24,7 @@ public class OracleGenerator {
 
 		//代码生成配置
 		List<String> tableNameList = Arrays.asList(tableName.split(","));
-		String url = "jdbc:oracle:thin:@47.119.136.175:1521:helowin";
+		String url = "jdbc:mysql://47.119.136.175:3306/wms_warehouse";
 		String dir = System.getProperty("user.dir");
 
 		FastAutoGenerator.create(url, "zdw", "123456")

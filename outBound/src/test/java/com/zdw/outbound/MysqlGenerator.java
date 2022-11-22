@@ -12,19 +12,19 @@ import java.util.List;
 /**
  * Mybatis-Plus自动生成文件(Oracle)
  */
-public class OracleGenerator {
+public class MysqlGenerator {
 
 	@Test
 	public void generator() {
 		//表名 (支持输入多个表，用","隔开，例如"A,B")
-		String tableName = "MAT_QC";
+		String tableName = "SEATA_OUT_BOUND";
 
 		//作者名
 		String author = "卓德文";
 
 		//代码生成配置
 		List<String> tableNameList = Arrays.asList(tableName.split(","));
-		String url = "jdbc:oracle:thin:@47.119.136.175:1521:helowin";
+		String url = "jdbc:mysql://47.119.136.175:3306/wms_outbound";
 		String dir = System.getProperty("user.dir");
 
 		FastAutoGenerator.create(url, "zdw", "123456")
