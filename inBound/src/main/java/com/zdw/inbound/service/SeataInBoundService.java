@@ -1,5 +1,6 @@
 package com.zdw.inbound.service;
 
+import com.zdw.inbound.dto.SeataInBoundDto;
 import com.zdw.inbound.entity.SeataInBoundEntity;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,5 +14,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface SeataInBoundService  {
 
-    public int insert(SeataInBoundEntity seataInBoundEntity);
+    public int insert(SeataInBoundDto seataInBoundDto);
 }

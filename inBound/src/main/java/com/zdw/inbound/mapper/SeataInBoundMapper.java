@@ -2,6 +2,7 @@ package com.zdw.inbound.mapper;
 
 import com.zdw.inbound.entity.SeataInBoundEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -12,6 +13,7 @@ import org.apache.ibatis.annotations.Param;
  * @author 卓德文
  * @since 2022-11-22
  */
+@Mapper
 public interface SeataInBoundMapper extends BaseMapper<SeataInBoundEntity> {
 
 }

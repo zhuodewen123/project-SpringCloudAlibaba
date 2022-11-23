@@ -3,7 +3,7 @@ package com.zdw.inbound.feign;
 import com.zdw.inbound.feign.fallback.SeataInBoundFeignClientFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author 卓德文
  * @date 2022/11/22
  */
-@FeignClient(name = "outbound", /*contextId = "com.zdw.inbound.feign.SeataInBoundFeignClient" ,*/ fallback = SeataInBoundFeignClientFallbackFactory.class)
+@Component
+@FeignClient(name = "outbound", contextId = "com.zdw.inbound.feign.SeataInBoundFeignClient" , fallback = SeataInBoundFeignClientFallbackFactory.class)
 public interface SeataInBoundFeignClient {
 
 	/**

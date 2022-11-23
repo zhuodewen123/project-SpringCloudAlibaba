@@ -1,5 +1,6 @@
 package com.zdw.inbound.controller;
 
+import com.zdw.inbound.dto.SeataInBoundDto;
 import com.zdw.inbound.entity.SeataInBoundEntity;
 import com.zdw.inbound.service.SeataInBoundService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,12 +23,12 @@ public class SeataInBoundController {
 
     /**
      * 测试seata分布式事务
-     * @param seataInBoundEntity
+     * @param seataInBoundDto
      * @return
      */
     @PostMapping("/testSeata")
-    public Integer testSeata(@RequestBody SeataInBoundEntity seataInBoundEntity) {
-        return seataInBoundService.insert(seataInBoundEntity);
+    public Integer testSeata(@RequestBody SeataInBoundDto seataInBoundDto) {
+        return seataInBoundService.insert(seataInBoundDto);
     }
 
 }

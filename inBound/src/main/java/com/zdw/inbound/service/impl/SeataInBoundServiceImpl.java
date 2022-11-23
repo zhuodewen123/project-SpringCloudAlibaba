@@ -1,6 +1,8 @@
 package com.zdw.inbound.service.impl;
 
+import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.ObjectUtil;
+import com.zdw.inbound.dto.SeataInBoundDto;
 import com.zdw.inbound.entity.SeataInBoundEntity;
 import com.zdw.inbound.feign.SeataInBoundFeignClient;
 import com.zdw.inbound.mapper.SeataInBoundMapper;
@@ -29,13 +31,14 @@ public class SeataInBoundServiceImpl extends ServiceImpl<SeataInBoundMapper, Sea
 
     /**
      * 测试seata分布式事务
-     * @param seataInBoundEntity
+     * @param seataInBoundDto
      * @return
      */
     @Override
     @GlobalTransactional(name = "seataTest",rollbackFor = Exception.class)
-    public int insert(SeataInBoundEntity seataInBoundEntity) {
+    public int insert(SeataInBoundDto seataInBoundDto) {
         //1.调用当前入库服务方法A
+        SeataInBoundEntity seataInBoundEntity = BeanUtil.copyProperties(seataInBoundDto, SeataInBoundEntity.class);
         seataInBoundMapper.insert(seataInBoundEntity);
         //2.远程调用出库服务方法B
         ResponseEntity<Integer> responseEntity = seataInBoundFeignClient.testSeata(seataInBoundEntity.getInNo(), seataInBoundEntity.getInBound());
