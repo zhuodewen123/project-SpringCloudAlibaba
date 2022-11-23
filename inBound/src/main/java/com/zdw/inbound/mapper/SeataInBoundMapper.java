@@ -1,9 +1,8 @@
 package com.zdw.inbound.mapper;
 
-import com.zdw.inbound.entity.SeataInBoundEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.zdw.inbound.entity.SeataInBoundEntity;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>

@@ -1,9 +1,12 @@
 package com.zdw.outbound.controller;
 
-import com.zdw.outbound.entity.SeataOutBoundEntity;
+import com.zdw.outbound.dto.SeataOutBoundDto;
 import com.zdw.outbound.service.SeataOutBoundService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
@@ -28,10 +31,10 @@ public class SeataOutBoundController {
      */
     @PostMapping("/testSeata")
     public Integer testSeata(@RequestParam String inNo,@RequestParam String outBound) {
-        SeataOutBoundEntity seataOutBoundEntity = new SeataOutBoundEntity();
-        seataOutBoundEntity.setInNo(inNo);
-        seataOutBoundEntity.setOutBound(outBound);
-        return seataOutBoundService.insert(seataOutBoundEntity);
+        SeataOutBoundDto seataOutBoundDto = new SeataOutBoundDto();
+        seataOutBoundDto.setInNo(inNo);
+        seataOutBoundDto.setOutBound(outBound);
+        return seataOutBoundService.insert(seataOutBoundDto);
     }
 
 }

@@ -1,12 +1,13 @@
 package com.zdw.outbound.service.impl;
 
+import cn.hutool.core.bean.BeanUtil;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.zdw.outbound.dto.SeataOutBoundDto;
 import com.zdw.outbound.entity.SeataOutBoundEntity;
 import com.zdw.outbound.mapper.SeataOutBoundMapper;
 import com.zdw.outbound.service.SeataOutBoundService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
@@ -24,11 +25,12 @@ public class SeataOutBoundServiceImpl extends ServiceImpl<SeataOutBoundMapper, S
 
     /**
      * 新增方法--测试seata分布式事务
-     * @param seataOutBoundEntity
+     * @param seataOutBoundDto
      * @return
      */
     @Override
-    public int insert(SeataOutBoundEntity seataOutBoundEntity) {
+    public int insert(SeataOutBoundDto seataOutBoundDto) {
+        SeataOutBoundEntity seataOutBoundEntity = BeanUtil.copyProperties(seataOutBoundDto, SeataOutBoundEntity.class);
         return seataOutBoundMapper.insert(seataOutBoundEntity);
     }
 }

@@ -1,11 +1,12 @@
-package com.zdw.inbound.dto;
+package com.zdw.outbound.dto;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Getter;
 import lombok.Setter;
 
 /**
  * <p>
- * SeataInBoundDto对象
+ * SeataOutBoundDto对象
  * </p>
  *
  * @author 卓德文
@@ -13,9 +14,9 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class SeataInBoundDto {
+public class SeataOutBoundDto {
 
-    private String inBound;
+    private String outBound;
 
     private String inNo;
 
