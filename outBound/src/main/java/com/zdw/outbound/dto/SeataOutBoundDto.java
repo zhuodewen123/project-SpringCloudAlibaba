@@ -1,6 +1,7 @@
 package com.zdw.outbound.dto;
 
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,8 +17,10 @@ import lombok.Setter;
 @Setter
 public class SeataOutBoundDto {
 
+    @ApiModelProperty("出库字段")
     private String outBound;
 
+    @ApiModelProperty("入库单号")
     private String inNo;
 
 

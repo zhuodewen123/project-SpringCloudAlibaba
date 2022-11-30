@@ -2,6 +2,9 @@ package com.zdw.outbound.controller;
 
 import com.zdw.outbound.dto.SeataOutBoundDto;
 import com.zdw.outbound.service.SeataOutBoundService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/seataOutBound")
+@Api(value="seata测试接口",tags={"seataAPi"})
 public class SeataOutBoundController {
 
     @Autowired
@@ -30,7 +34,8 @@ public class SeataOutBoundController {
      * @return
      */
     @PostMapping("/testSeata")
-    public Integer testSeata(@RequestParam String inNo,@RequestParam String outBound) {
+    @ApiOperation("seata测试方法-testSeata")
+    public Integer testSeata(@RequestParam @ApiParam(name = "入库单号" ,value = "inNo" , required = true) String inNo, @RequestParam @ApiParam(name = "出库字段" ,value = "outBound" , required = true) String outBound) {
         SeataOutBoundDto seataOutBoundDto = new SeataOutBoundDto();
         seataOutBoundDto.setInNo(inNo);
         seataOutBoundDto.setOutBound(outBound);

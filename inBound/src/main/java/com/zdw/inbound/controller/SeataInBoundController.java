@@ -2,11 +2,15 @@ package com.zdw.inbound.controller;
 
 import com.zdw.inbound.dto.SeataInBoundDto;
 import com.zdw.inbound.service.SeataInBoundService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
 
 /**
  * <p>
@@ -18,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/seataInBound")
+@Api(value="seata测试接口",tags={"seataAPi"})
 public class SeataInBoundController {
 
     @Autowired
@@ -29,7 +34,8 @@ public class SeataInBoundController {
      * @return
      */
     @PostMapping("/testSeata")
-    public Integer testSeata(@RequestBody SeataInBoundDto seataInBoundDto) {
+    @ApiOperation("seata测试方法-testSeata")
+    public Integer testSeata(@RequestBody @Valid SeataInBoundDto seataInBoundDto) {
         return seataInBoundService.insert(seataInBoundDto);
     }
 
