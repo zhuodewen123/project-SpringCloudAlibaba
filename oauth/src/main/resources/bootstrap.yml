@@ -1,0 +1,27 @@
+spring:
+  #server name
+  application:
+    name: oauth
+
+  #profile
+  profiles:
+    active: dev
+
+  cloud:
+    #nacos
+    nacos:
+      config:
+        server-addr: 47.119.136.175:8848
+        file-extension: yaml
+        namespace: f1570515-b5cb-4a22-a52d-5de7aeebb3f3
+      discovery:
+        server-addr: 47.119.136.175:8848
+        namespace: f1570515-b5cb-4a22-a52d-5de7aeebb3f3
+
+#port
+server:
+  port: 8085
+
+
+
+
