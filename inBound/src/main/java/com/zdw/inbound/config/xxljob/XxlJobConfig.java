@@ -1,4 +1,4 @@
-package com.zdw.inbound.config;
+package com.zdw.inbound.config.xxljob;
 
 import com.xxl.job.core.executor.impl.XxlJobSpringExecutor;
 import lombok.extern.slf4j.Slf4j;

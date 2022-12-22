@@ -1,4 +1,4 @@
-package com.zdw.inbound.config;
+package com.zdw.inbound.config.minio;
 
 import cn.hutool.core.util.StrUtil;
 import com.google.common.io.Resources;

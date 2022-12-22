@@ -1,4 +1,4 @@
-package com.zdw.oauth.config;
+package com.zdw.inbound.config.swagger;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.context.annotation.Bean;
