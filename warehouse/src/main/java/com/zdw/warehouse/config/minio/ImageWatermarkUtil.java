@@ -1,4 +1,4 @@
-package com.zdw.warehouse.config;
+package com.zdw.warehouse.config.minio;
 
 import cn.hutool.core.util.StrUtil;
 import com.google.common.io.Resources;

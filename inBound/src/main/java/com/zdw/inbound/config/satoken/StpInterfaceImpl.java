@@ -15,7 +15,7 @@ import java.util.List;
 public class StpInterfaceImpl implements StpInterface {
 
     /**
-     *使用根据loginId动态查询对应权限
+     * 使用根据loginId动态查询对应权限
      */
     @Override
     public List<String> getPermissionList(Object loginId, String loginType) {
@@ -26,7 +26,7 @@ public class StpInterfaceImpl implements StpInterface {
     }
 
     /**
-     *使用根据loginId动态查询对应角色
+     * 使用根据loginId动态查询对应角色
      */
     @Override
     public List<String> getRoleList(Object loginId, String loginType) {

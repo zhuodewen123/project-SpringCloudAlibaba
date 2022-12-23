@@ -1,4 +1,4 @@
-package com.zdw.warehouse.config;
+package com.zdw.warehouse.config.swagger;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.context.annotation.Bean;

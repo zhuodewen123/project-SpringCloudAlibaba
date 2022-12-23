@@ -1,4 +1,4 @@
-package com.zdw.gateway.config.satoken;
+package com.zdw.outbound.config.satoken;
 
 import cn.dev33.satoken.stp.StpInterface;
 import org.springframework.stereotype.Component;
@@ -21,8 +21,6 @@ public class StpInterfaceImpl implements StpInterface {
     public List<String> getPermissionList(Object loginId, String loginType) {
         // 返回此 loginId 拥有的权限列表
         List<String> permissionList = new ArrayList<>();
-        permissionList.add("inbound");
-        permissionList.add("warehouse");
         permissionList.add("outbound");
         return permissionList;
     }

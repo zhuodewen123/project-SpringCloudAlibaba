@@ -21,6 +21,7 @@ public class UserLoginController {
 
     /**
      * 手机登录
+     *
      * @return
      */
     @ApiOperation(value = "手机登录")
@@ -28,15 +29,16 @@ public class UserLoginController {
     public JSONResult phoneLogin(@RequestBody UserEntity userEntity) {
         JSONResult jsonResult = new JSONResult();
         // 此处仅作模拟示例，真实项目需要从数据库中查询数据进行比对
-        if("13422075804".equals(userEntity.getPhone()) && "123456".equals(userEntity.getPwd())) {
+        if ("13422075804".equals(userEntity.getPhone()) && "123456".equals(userEntity.getPwd())) {
             StpUtil.login(10001);
-            return jsonResult.markSuccess("手机登录成功",StpUtil.getTokenInfo());
+            return jsonResult.markSuccess("手机登录成功", StpUtil.getTokenInfo());
         }
         return jsonResult.markFail("手机登录失败");
     }
 
     /**
      * 账号登录
+     *
      * @return
      */
     @ApiOperation(value = "账号登录")
@@ -44,15 +46,16 @@ public class UserLoginController {
     public JSONResult doLogin(@RequestBody UserEntity userEntity) {
         JSONResult jsonResult = new JSONResult();
         // 此处仅作模拟示例，真实项目需要从数据库中查询数据进行比对
-        if("zhuodewen".equals(userEntity.getName()) && "123456".equals(userEntity.getPwd())) {
+        if ("zhuodewen".equals(userEntity.getName()) && "123456".equals(userEntity.getPwd())) {
             StpUtil.login(10002);
-            return jsonResult.markSuccess("账号登录成功",StpUtil.getTokenInfo());
+            return jsonResult.markSuccess("账号登录成功", StpUtil.getTokenInfo());
         }
         return jsonResult.markFail("账号登录失败");
     }
 
     /**
      * 查询登录状态
+     *
      * @return
      */
     @ApiOperation(value = "查询登录状态")
@@ -63,6 +66,7 @@ public class UserLoginController {
 
     /**
      * 查询Token信息
+     *
      * @return
      */
     @ApiOperation(value = "查询Token信息")
@@ -73,13 +77,14 @@ public class UserLoginController {
 
     /**
      * 注销
+     *
      * @return
      */
     @ApiOperation(value = "注销")
     @GetMapping("logout")
     public SaResult logout(String loginId) {
         StpUtil.logout(loginId);
-        return SaResult.ok("loginId："+loginId+",注销成功");
+        return SaResult.ok("loginId：" + loginId + ",注销成功");
     }
 
 }

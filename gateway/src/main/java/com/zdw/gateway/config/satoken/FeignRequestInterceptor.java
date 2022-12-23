@@ -1,4 +1,4 @@
-package com.zdw.inbound.config.satoken;
+package com.zdw.gateway.config.satoken;
 
 import cn.dev33.satoken.exception.NotLoginException;
 import cn.dev33.satoken.stp.StpUtil;

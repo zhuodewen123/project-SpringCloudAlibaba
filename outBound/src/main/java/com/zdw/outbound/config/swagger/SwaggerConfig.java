@@ -1,4 +1,4 @@
-package com.zdw.outbound.config;
+package com.zdw.outbound.config.swagger;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.context.annotation.Bean;
